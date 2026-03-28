@@ -1,0 +1,15 @@
+# Render Blueprint: https://docs.render.com/docs/infrastructure-as-code
+# ダッシュボード → New → Blueprint → このリポジトリを接続 → デプロイ
+# GEMINI_API_KEY は初回または Environment で必ず設定（sync: false）
+
+services:
+  - type: web
+    name: global-energy-news-daily
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    region: singapore
+    healthCheckPath: /
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false

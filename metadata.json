@@ -1,0 +1,5 @@
+{
+  "name": "Global Energy News Daily",
+  "description": "Daily news investigation on international energy issues with voice conversation support.",
+  "requestFramePermissions": ["microphone"]
+}
